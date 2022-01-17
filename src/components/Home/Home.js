@@ -10,7 +10,7 @@ const Home = () => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
             .then(data => setFriends(data))
-    })
+    }, [])
     return (
         <div>
             <h1>Friends: {friends.length}</h1>
